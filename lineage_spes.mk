@@ -14,15 +14,16 @@ $(call inherit-product, device/xiaomi/spes/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# RiceDroid spesific flags
-RICE_MAINTAINER := Agatha
-RICE_CHIPSET := SM680
-SUSHI_BOOTANIMATION := 1080
-WITH_GMS := true
+# GAPPS main flag
+WITH_GAPPS := true
+TARGET_CORE_GAPPS := true
+
+# Alpha internal properties
 TARGET_ENABLE_BLUR := true
+TARGET_USE_PIXEL_LAUNCHER := false
+TARGET_EXCLUDES_AUDIOFX := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_OPTOUT_GOOGLE_TELEPHONY := true
-TARGET_USE_PIXEL_FINGERPRINT := true
+ALPHA_MAINTAINER := Agatha
 
 # Product Specifics
 PRODUCT_NAME := lineage_spes
